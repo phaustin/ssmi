@@ -14,6 +14,7 @@ RUN git clone https://github.com/phaustin/e582.git
 ENV PATH /opt/conda/bin:$PATH
 RUN conda install -y cython && conda install -y h5py && \
     conda install -y ipython && conda install -y cmake && \
-    conda install pandas && conda install pytables
+    conda install pandas && conda install pytables && \
+    echo 'export LD_RUN_PATH=/e582/ssmi/fortran' > /etc/profile.d/rpath.sh
 
 
