@@ -11,5 +11,7 @@ RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
 RUN apt-get install -y gfortran
 RUN apt-get install -y git
 RUN git clone https://github.com/phaustin/e582.git
-
 ENV PATH /opt/conda/bin:$PATH
+RUN conda install -y cython
+RUN conda install -y h5py
+
