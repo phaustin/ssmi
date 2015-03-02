@@ -12,9 +12,11 @@ RUN apt-get install -y gfortran &&  apt-get install -y git && \
     apt-get install -y make && apt-get install -y g++
 RUN git clone https://github.com/phaustin/e582.git
 ENV PATH /opt/conda/bin:$PATH
+ENV LD_RUN_PATH /e582/ssmi/fortran/lib
 RUN conda install -y cython && conda install -y h5py && \
     conda install -y ipython && conda install -y cmake && \
     conda install pandas && conda install pytables && \
-    echo 'export LD_RUN_PATH=/e582/ssmi/fortran' > /etc/profile.d/rpath.sh
+    echo 'export LD_RUN_PATH=/e582/ssmi/fortran/lib' > /etc/profile.d/rpath.sh
+    
 
 
