@@ -1,4 +1,4 @@
-FROM debian:7.4
+FROM debian:latest
 
 MAINTAINER Phil Austin
 
